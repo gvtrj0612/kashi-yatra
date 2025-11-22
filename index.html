@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KashiYatra - Spiritual Journey to Varanasi</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+    <nav class="navbar">
+        <div class="logo">
+            <a href="index.html" class="logo-link">🛕 KashiYatra</a>
+        </div>
+        <div class="nav-links">
+            <a href="index.html" class="nav-link active">Home</a>
+            <a href="#packages" class="nav-link">Packages</a>
+            <a href="hotels.html" class="nav-link">Hotels</a>
+            <a href="guides.html" class="nav-link">Guides</a>
+            <a href="contact.html" class="nav-link">Contact</a>
+            <button class="login-btn">Login</button>
+        </div>
+        <div class="mobile-menu">
+            <span>☰</span>
+        </div>
+    </nav>
+</header>
+
+    <main>
+                <!-- Simple Hero Section with Changing Background -->
+        <section class="hero">
+            <div class="hero-background">
+                <div class="image-slider">
+                    <div class="slide active">
+                        <img src="images/ganga-aarti.jpg" alt="Ganga Aarti Varanasi">
+                    </div>
+                    <div class="slide">
+                        <img src="images/sec.jpg" alt="Kashi Vishwanath Temple">
+                    </div>
+                    <div class="slide">
+                        <img src="images/third.jpg" alt="Varanasi Ghats">
+                    </div>
+                </div>
+                <div class="overlay"></div>
+            </div>
+
+            <div class="hero-content">
+                <h1>Experience the Spiritual Soul of Kashi</h1>
+                <p class="features-text">
+                    Verified tour packages • Fixed prices • 24/7 support<br>
+                    Authentic spiritual experiences
+                </p>
+                <div class="hero-buttons">
+                    <button class="btn-primary" onclick="openCustomizeForm()">CUSTOMIZE YOUR TRIP</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Customize Trip Modal -->
+        <div id="customizeModal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeCustomizeForm()">&times;</span>
+                <h2>🎯 Customize Your Spiritual Journey</h2>
+                <p class="modal-subtitle">Tell us your preferences and we'll create a personalized itinerary for you</p>
+                
+                <form class="customize-form" id="customizeForm">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>Full Name *</label>
+                            <input type="text" name="name" placeholder="Enter your full name" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Phone Number *</label>
+                            <input type="tel" name="phone" placeholder="Enter your phone number" required>
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>Email Address *</label>
+                            <input type="email" name="email" placeholder="Enter your email" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Travel Date</label>
+                            <input type="date" name="travel_date">
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>Number of Travelers</label>
+                            <select name="travelers">
+                                <option value="1">1 Person</option>
+                                <option value="2">2 People</option>
+                                <option value="3">3 People</option>
+                                <option value="4">4 People</option>
+                                <option value="5">5+ People</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>Trip Duration</label>
+                            <select name="duration">
+                                <option value="1">1 Day</option>
+                                <option value="2">2 Days</option>
+                                <option value="3">3 Days</option>
+                                <option value="4">4 Days</option>
+                                <option value="5">5+ Days</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Interests (Select all that apply)</label>
+                        <div class="interests-grid">
+                            <label class="interest-option">
+                                <input type="checkbox" name="interests" value="temples">
+                                <span>🛕 Temple Visits</span>
+                            </label>
+                            <label class="interest-option">
+                                <input type="checkbox" name="interests" value="ganga_aarti">
+                                <span>🔥 Ganga Aarti</span>
+                            </label>
+                            <label class="interest-option">
+                                <input type="checkbox" name="interests" value="sarnath">
+                                <span>☸️ Sarnath Buddhist Sites</span>
+                            </label>
+                            <label class="interest-option">
+                                <input type="checkbox" name="interests" value="boat_ride">
+                                <span>🛶 Ganga Boat Ride</span>
+                            </label>
+                            <label class="interest-option">
+                                <input type="checkbox" name="interests" value="meditation">
+                                <span>🧘 Meditation & Yoga</span>
+                            </label>
+                            <label class="interest-option">
+                                <input type="checkbox" name="interests" value="local_food">
+                                <span>🍛 Local Food Experience</span>
+                            </label>
+                            <label class="interest-option">
+                                <input type="checkbox" name="interests" value="shopping">
+                                <span>🛍️ Local Market & Shopping</span>
+                            </label>
+                            <label class="interest-option">
+                                <input type="checkbox" name="interests" value="photography">
+                                <span>📸 Photography Tour</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Special Requirements</label>
+                        <div class="requirements-grid">
+                            <label class="requirement-option">
+                                <input type="checkbox" name="requirements" value="senior_citizens">
+                                <span>👵 Senior Citizens</span>
+                            </label>
+                            <label class="requirement-option">
+                                <input type="checkbox" name="requirements" value="children">
+                                <span>👶 Children Friendly</span>
+                            </label>
+                            <label class="requirement-option">
+                                <input type="checkbox" name="requirements" value="wheelchair">
+                                <span>♿ Wheelchair Accessible</span>
+                            </label>
+                            <label class="requirement-option">
+                                <input type="checkbox" name="requirements" value="vegetarian">
+                                <span>🥗 Vegetarian Food Only</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Budget Range (per person)</label>
+                        <select name="budget">
+                            <option value="budget">Budget (₹1,000 - ₹3,000)</option>
+                            <option value="standard">Standard (₹3,000 - ₹7,000)</option>
+                            <option value="premium">Premium (₹7,000 - ₹15,000)</option>
+                            <option value="luxury">Luxury (₹15,000+)</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Describe Your Dream Trip *</label>
+                        <textarea name="description" placeholder="Tell us about your spiritual goals, specific places you want to visit, rituals you want to experience, or any special requests..." rows="4" required></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label>How did you hear about us?</label>
+                        <select name="source">
+                            <option value="">Select one</option>
+                            <option value="google">Google Search</option>
+                            <option value="friend">Friend Recommendation</option>
+                            <option value="social_media">Social Media</option>
+                            <option value="previous_visit">Previous Visit</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+
+                    <div class="form-submit">
+                        <button type="submit" class="submit-btn">
+                            <span class="btn-icon">✨</span>
+                            GET CUSTOMIZED PLAN
+                        </button>
+                        <p class="form-note">We'll call you within 2 hours to discuss your personalized itinerary</p>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <!-- Success Message -->
+        <div id="successMessage" class="success-message">
+            <div class="success-content">
+                <div class="success-icon">✅</div>
+                <h3>Thank You!</h3>
+                <p>We've received your trip details. Our travel expert will call you within 2 hours to create your perfect spiritual journey.</p>
+                <button onclick="closeSuccessMessage()" class="success-btn">Great!</button>
+            </div>
+        </div>
+
+        <!-- Search Section -->
+        <section class="search-section">
+            <div class="search-container">
+                <h2>Find Your Perfect Spiritual Journey</h2>
+                <div class="search-box">
+                    <input type="text" placeholder="Search packages, hotels, guides...">
+                    <button class="search-btn">Search</button>
+                </div>
+            </div>
+        </section>
+
+                <!-- Popular Packages -->
+        <section class="packages" id="packages">
+            <div class="container">
+                <h2>Popular Packages</h2>
+                <div class="packages-grid">
+                    <!-- Package 1 -->
+                    <div class="package-card">
+                        <div class="package-image">
+                            <img src="images/ganga-aarti.jpg" alt="2-Day Spiritual Package">
+                        </div>
+                        <div class="package-content">
+                            <h3>2-Day Spiritual Experience</h3>
+                            <p>Kashi Vishwanath + Ganga Aarti + Local Temples</p>
+                            <div class="package-price">
+                                <span class="price">₹2,999</span>
+                                <span class="duration">2 days</span>
+                            </div>
+                            <a href="package-2day.html" class="book-now-btn">View Details</a>
+                        </div>
+                    </div>
+
+                    <!-- Package 2 -->
+                    <div class="package-card">
+                        <div class="package-image">
+                            <img src="images/sec.jpg" alt="3-Day Complete Package">
+                        </div>
+                        <div class="package-content">
+                            <h3>3-Day Complete Experience</h3>
+                            <p>All major temples + Sarnath + Boat ride + Cultural show</p>
+                            <div class="package-price">
+                                <span class="price">₹4,499</span>
+                                <span class="duration">3 days</span>
+                            </div>
+                            <a href="package-3day.html" class="book-now-btn">View Details</a>
+                        </div>
+                    </div>
+
+                    <!-- Package 3 -->
+                    <div class="package-card">
+                        <div class="package-image">
+                            <img src="images/third.jpg" alt="Sarnath Package">
+                        </div>
+                        <div class="package-content">
+                            <h3>Sarnath Enlightenment</h3>
+                            <p>Dhamek Stupa + Museum + Buddhist Temples + Meditation</p>
+                            <div class="package-price">
+                                <span class="price">₹1,999</span>
+                                <span class="duration">1 day</span>
+                            </div>
+                            <a href="package-sarnath.html" class="book-now-btn">View Details</a>
+                        </div>
+                    </div>
+
+                    <!-- Package 4 -->
+                    <div class="package-card">
+                        <div class="package-image">
+                            <img src="images/ganga-aarti.jpg" alt="Ganga Aarti Special">
+                        </div>
+                        <div class="package-content">
+                            <h3>Ganga Aarti Special</h3>
+                            <p>VIP Aarti Pass + Boat Ride + Evening Rituals + Photography</p>
+                            <div class="package-price">
+                                <span class="price">₹1,499</span>
+                                <span class="duration">Evening</span>
+                            </div>
+                            <a href="package-aarti.html" class="book-now-btn">View Details</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section class="features">
+            <div class="container">
+                <h2>Why Choose KashiYatra?</h2>
+                <div class="feature-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">💰</div>
+                        <h3>No Overcharging</h3>
+                        <p>Fixed prices for all services. No hidden costs.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">✅</div>
+                        <h3>Verified Guides</h3>
+                        <p>Government-approved local guides with language options.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🛡️</div>
+                        <h3>Safe & Secure</h3>
+                        <p>24/7 customer support and emergency contacts.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🎯</div>
+                        <h3>Custom Itineraries</h3>
+                        <p>Personalized travel plans based on your preferences.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>🛕 KashiYatra</h3>
+                <p>Experience the spiritual soul of Varanasi with verified tours, fixed prices, and authentic experiences.</p>
+                <div class="social-links">
+                    <a href="#">📘</a>
+                    <a href="#">📷</a>
+                    <a href="#">🐦</a>
+                    <a href="#">💼</a>
+                </div>
+            </div>
+            
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html#packages">Packages</a></li>
+                    <li><a href="hotels.html">Hotels</a></li>
+                    <li><a href="guides.html">Guides</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h4>Popular Packages</h4>
+                <ul>
+                    <li><a href="package-2day.html">2-Day Spiritual</a></li>
+                    <li><a href="package-3day.html">3-Day Complete</a></li>
+                    <li><a href="package-sarnath.html">Sarnath Tour</a></li>
+                    <li><a href="package-aarti.html">Ganga Aarti</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h4>Contact Info</h4>
+                <p>📞 +91 98765 43210</p>
+                <p>✉️ hello@kashiyatra.com</p>
+                <p>📍 Varanasi, Uttar Pradesh</p>
+                <p>🕒 24/7 Customer Support</p>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2024 KashiYatra. All rights reserved. | 
+               <a href="privacy.html">Privacy Policy</a> | 
+               <a href="terms.html">Terms of Service</a> | 
+               Experience the Divine</p>
+        </div>
+    </div>
+</footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
